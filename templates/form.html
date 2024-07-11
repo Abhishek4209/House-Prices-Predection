@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            width: 100px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>House Price Prediction Form</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="NoOfBedrooms">Bedrooms:</label>
+                <input type="number" id="NoOfBedrooms" name="NoOfBedrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="NoOfBathrooms">Bathrooms:</label>
+                <input type="number" id="NoOfBathrooms" name="NoOfBathrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="NoOfFloors">Floors:</label>
+                <input type="number" id="NoOfFloors" name="NoOfFloors" required>
+            </div>
+            <div class="form-group">
+                <label for="FlatArea">Flat Area:</label>
+                <input type="number" id="FlatArea" name="FlatArea" required>
+            </div>
+            <div class="form-group">
+                <label for="LotArea">Lot Area:</label>
+                <input type="number" id="LotArea" name="LotArea" required>
+            </div>
+            <div class="form-group">
+                <label for="BasementArea">Basement Area:</label>
+                <input type="number" id="BasementArea" name="BasementArea" required>
+            </div>
+            <div class="form-group">
+                <label for="AreaOfTheHouseFromBasement">House Area:</label>
+                <input type="number" id="AreaOfTheHouseFromBasement" name="AreaOfTheHouseFromBasement" required>
+            </div>
+            <div class="form-group">
+                <label for="LivingAreaAfterRenovation">Living Area:</label>
+                <input type="number" id="LivingAreaAfterRenovation" name="LivingAreaAfterRenovation" required>
+            </div>
+            <div class="form-group">
+                <label for="LotAreaAfterRenovation">Lot Area:</label>
+                <input type="number" id="LotAreaAfterRenovation" name="LotAreaAfterRenovation" required>
+            </div>
+            <div class="form-group">
+                <label for="AgeOfHouse">Age:</label>
+                <input type="number" id="AgeOfHouse" name="AgeOfHouse" required>
+            </div>
+            <div class="form-group">
+                <label for="ConditionOfTheHouse">Condition:</label>
+                <select id="ConditionOfTheHouse" name="ConditionOfTheHouse" required>
+                    <option value="Fair">Fair</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Okay">Okay</option>
+                    <option value="Bad">Bad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="OverallGrade">Grade:</label>
+                <select id="OverallGrade" name="OverallGrade" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Predict Price</button>
+        </form>
+    </div>
+</body>
+</html>
